@@ -1,7 +1,7 @@
 {
   "name": "example-feature-button",
   "private": false,
-  "version": "0.0.1-rc.5",
+  "version": "0.1.0-rc.1",
   "type": "module",
   "scripts": {
     "dev": "vite",

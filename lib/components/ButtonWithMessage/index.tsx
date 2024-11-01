@@ -3,12 +3,12 @@ import viteIcon from '../../assets/vite.svg';
 import { useState } from 'react'
 import { Button } from '@mui/material';
 import { ButtonWithMessageProps } from './index.types';
+import Message from '../Message';
 
 
 const ButtonWithMessage = ({
   buttonText = 'Show the thing',
   message = 'Its the message',
-  messageId = 'delayedMessage',
 }: ButtonWithMessageProps) => {
   const [showMessage, setShowMessage] = useState(false);
 
@@ -18,7 +18,7 @@ const ButtonWithMessage = ({
         {buttonText}
       </Button>
 
-      {showMessage && <div className="message" id={messageId}>{message}</div>}
+      {showMessage && <Message>{message}</Message>}
 
       <img src={viteIcon} />
     </>
