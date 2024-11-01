@@ -1,3 +1,5 @@
+import './styles.css';
+import viteIcon from '../../assets/vite.svg';
 import { useState } from 'react'
 import { Button } from '@mui/material';
 import { ButtonWithMessageProps } from './index.types';
@@ -10,15 +12,15 @@ const ButtonWithMessage = ({
 }: ButtonWithMessageProps) => {
   const [showMessage, setShowMessage] = useState(false);
 
-  console.log('TEST')
-
   return (
     <>
-      <Button onClick={() => setShowMessage(true)}>
+      <Button className="button" onClick={() => setShowMessage(true)}>
         {buttonText}
       </Button>
 
-      {showMessage && <div id={messageId}>{message}</div>}
+      {showMessage && <div className="message" id={messageId}>{message}</div>}
+
+      <img src={viteIcon} />
     </>
   );
 };

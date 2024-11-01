@@ -2,12 +2,18 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import dts from 'vite-plugin-dts'
+import libAssetsPlugin from '@laynezh/vite-plugin-lib-assets'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     dts({ include: 'lib' }),
+    libAssetsPlugin({
+      include: ['**/*.svg', '**/*.css'],
+      outputPath: './',
+      name: '[name].[ext]',
+    }),
   ],
   build: {
     copyPublicDir: false,

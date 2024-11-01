@@ -1,0 +1,12 @@
+:root {
+  --color-button-primary: red;
+  --color-message-primary: #6c757d;
+}
+
+.button {
+  color: var(--color-button-primary) !important;
+}
+
+.message {
+  color: var(--color-message-primary);
+}

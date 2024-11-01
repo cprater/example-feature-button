@@ -1,7 +1,7 @@
 {
   "name": "example-feature-button",
   "private": false,
-  "version": "0.0.1-rc.1",
+  "version": "0.0.1-rc.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,7 +22,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "public"
   ],
   "peerDependencies": {
     "react": "^18.2.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@emotion/styled": "^11.13.0",
+    "@laynezh/vite-plugin-lib-assets": "^0.5.24",
     "@mui/material": "^6.1.5",
     "@mui/styled-engine-sc": "^6.1.5",
     "@types/react": "^18.2.66",
